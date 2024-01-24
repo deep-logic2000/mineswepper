@@ -1,0 +1,81 @@
+:root {
+  --bg-color-main: rgb(220, 239, 255); // bg-color of body
+  --bg-color-middle: rgb(192, 192, 192);
+  --bg-color-info-panel: rgb(192, 192, 192);
+  --bg-cells: #cabcbc; // bg-color not checked cells
+  --cell-bg-color: rgb(198, 198, 198); //bg-color of checked cell
+  --cell-border-top: #f5f3eb;
+  --cell-border-right: #a7a497;
+  --cell-border-bottom: #a7a497;
+  --cell-border-left: #fff9db;
+  --cell-border-color-1: rgb(255, 255, 255);
+  --cell-border-color-2: rgb(128, 128, 128);
+  --cell-border-outside-top: #fff9db;
+  --cell-border-outside-right: #979588;
+  --cell-border-outside-bottom: #979588;
+  --cell-border-outside-left: #fff9db;
+
+  --button-border-top: #dfdcd3;
+
+  --number-one-color: rgb(0, 0, 255);
+  --number-two-color: rgb(0, 128, 0);
+  --number-three-color: rgb(255, 0, 0);
+  --number-four-color: rgb(0, 0, 128);
+  --number-five-color: rgb(128, 0, 0);
+  --number-six-color: rgb(0, 128, 128);
+  --number-seven-color: rgb(0, 0, 64);
+  --number-eight-color: rgb(90, 90, 90);
+
+  --switch-icon: "🌚";
+  --switch-shadow-color: #373d4e;
+
+  --sound-switch-icon: "\01F50A";
+
+  --color-winner-text: #9900ff;
+  --color-lose-text: #ff3535;
+}
+
+.theme-dark {
+  --bg-color-main: rgb(90, 98, 105);
+  --bg-color-middle: rgb(156, 156, 156);
+  --bg-color-info-panel: rgb(156, 156, 156);
+  --bg-cells: #aa9e9e;
+  --cell-bg-color: rgb(198, 198, 198);
+  --cell-border-color-1: rgb(255, 255, 255);
+  --cell-border-color-2: rgb(128, 128, 128);
+  --cell-border-top: #e2e1da;
+  --cell-border-right: #7a786f;
+  --cell-border-bottom: #7a786f;
+  --cell-border-left: #e2e1da;
+  --cell-border-outside-top: #d8d4bf;
+  --cell-border-outside-right: #74726b;
+  --cell-border-outside-bottom: #979588;
+  --cell-border-outside-left: #fff9db;
+
+  --number-one-color: rgb(0, 0, 255);
+  --number-two-color: rgb(0, 128, 0);
+  --number-three-color: rgb(255, 0, 0);
+  --number-four-color: rgb(0, 0, 128);
+  --number-five-color: rgb(128, 0, 0);
+  --number-six-color: rgb(0, 128, 128);
+  --number-seven-color: rgb(0, 0, 64);
+  --number-eight-color: rgb(90, 90, 90);
+
+  --switch-icon: "🌝";
+  --switch-shadow-color: #fce477;
+
+  --color-winner-text: #fdf914;
+  --color-lose-text: #ff3535;
+
+}
+
+.sound-off {
+  --sound-switch-icon: "\01F507";
+}
+
+
+
+$media-xs: 600px;
+$media-s: 768px;
+$media-m: 900px;
+$media-l: 1024px;

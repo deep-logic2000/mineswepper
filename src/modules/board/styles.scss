@@ -1,0 +1,212 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  user-select: none;
+  width: calc(100vw - 17px);
+  margin: 0;
+}
+
+.boardWrapper {
+  box-sizing: border-box;
+  border: 3px solid;
+  border-color: var(--cell-border-outside-top) var(--cell-border-outside-right)
+    var(--cell-border-outside-bottom) var(--cell-border-outside-left);
+}
+
+.boardWrapperOutside {
+  box-sizing: border-box;
+  width: 378px;
+  height: 378px;
+
+
+}
+
+.boardWrapperOutside-m {
+  width: 80vw;
+  height: 80vw;
+
+  @media screen and (min-width: $media-s) {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  @media screen and (min-width: $media-m) {
+    width: 50vw;
+    height: 50vw;
+  }
+  @media screen and (min-width: $media-l) {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.boardWrapperOutside-l {
+  width: calc(100vw - 23px);
+  height: calc(100vw - 23px);
+
+  @media screen and (min-width: $media-s) {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  @media screen and (min-width: $media-m) {
+    width: 80vw;
+    height: 80vw;
+  }
+  @media screen and (min-width: $media-l) {
+    width: 900px;
+    height: 900px;
+  }
+
+}
+
+.boardWrapperMiddle {
+  box-sizing: border-box;
+  border: 8px solid;
+  border-color: var(--bg-color-middle);
+  width: 100%;
+  height: 100%;
+}
+
+.boardWrapperInside {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
+  border: 3px solid;
+  border-color: var(--cell-border-bottom) var(--cell-border-left)
+    var(--cell-border-top) var(--cell-border-right);
+  font-size: 24px;
+}
+
+.boardWrapperInside-m {
+  grid-template-columns: repeat(15, calc(100% / 15));
+  grid-template-rows: repeat(15, calc(100% / 15));
+  font-size: 22px;
+
+  @media screen and (min-width: $media-s) {
+    font-size: 22px;
+  }
+
+}
+
+.boardWrapperInside-l {
+  grid-template-columns: repeat(25, 4%);
+  grid-template-rows: repeat(25, 4%);
+  font-size: 17px;
+
+  @media screen and (min-width: $media-m) {
+    font-size: 19px;
+  }
+
+  @media screen and (min-width: $media-l) {
+    font-size: 24px;
+  }
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-cells);
+  border: 2px solid;
+  border-color: var(--cell-border-top) var(--cell-border-right)
+    var(--cell-border-bottom) var(--cell-border-left);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  user-select: none;
+
+  @media screen and (min-width: $media-xs) {
+    border: 3px solid;
+    border-color: var(--cell-border-top) var(--cell-border-right)
+      var(--cell-border-bottom) var(--cell-border-left);
+  }
+  @media screen and (min-width: $media-l) {
+    border: 4px solid;
+    border-color: var(--cell-border-top) var(--cell-border-right)
+      var(--cell-border-bottom) var(--cell-border-left);
+  }
+}
+
+.pressed {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cell-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid;
+  border-color: var(--cell-border-color-2) var(--cell-border-color-2)
+    var(--cell-border-color-2) var(--cell-border-color-2);
+}
+
+.bomb {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cell-bg-color);
+  background-image: url(../../assets/images/bomb.png);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid;
+  border-color: var(--cell-border-color-2) var(--cell-border-color-2)
+    var(--cell-border-color-2) var(--cell-border-color-2);
+}
+
+.checked {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cell-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 0.4px solid;
+  border-color: var(--cell-border-color-2) var(--cell-border-color-2)
+    var(--cell-border-color-2) var(--cell-border-color-2);
+}
+
+.flag {
+  background-image: url(../../assets/images/flag.png);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.exploded-cell {
+  background-color: rgb(255, 0, 0);
+}
+
+.one {
+  color: var(--number-one-color);
+}
+.two {
+  color: var(--number-two-color);
+}
+.three {
+  color: var(--number-three-color);
+}
+.four {
+  color: var(--number-four-color);
+}
+.five {
+  color: var(--number-five-color);
+}
+.six {
+  color: var(--number-six-color);
+}
+.seven {
+  color: var(--number-seven-color);
+}
+.eight {
+  color: var(--number-eight-color);
+}
