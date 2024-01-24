@@ -1,0 +1,238 @@
+.header {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.difficulty-panel-wrapper {
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 10px;
+
+  @media screen and (min-width: $media-s) {
+    display: flex;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img-wrapper {
+  width: 52px;
+  height: 52px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+
+  @media screen and (max-width: $media-m) {
+    display: none;
+  }
+}
+
+//========== buttons ==========
+
+.button {
+  display: inline-flex;
+  // margin: 10px;
+  text-decoration: none;
+  border: 2px solid #bfe2ff;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 20px;
+  color: #01051d;
+  font-weight: bold;
+  // text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  background: #767e86;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.button:hover,
+.button:active,
+.button:focus,
+.active {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+  color: #d9d9e0;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -45deg,
+    transparent,
+    rgba(191, 226, 255, 0.3),
+    transparent
+  );
+  transition: left 0.7s;
+}
+.button:hover:before,
+.button:active:before,
+.button:focus:before {
+  left: 100%;
+}
+
+// ===========select =============
+.select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 5px 10px;
+  background: #767e86;
+  border: 2px solid #bfe2ff;
+  // border-radius: 10px;
+  background-image: none;
+  font-size: 16px;
+  cursor: pointer;
+
+  // font-size: 16px;
+  line-height: 20px;
+  padding: 10px 36px 10px 10px;
+  color: #d9d9e0;
+  font-weight: bold;
+  // text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Custom Select wrapper */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  width: 160px;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* Arrow */
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  padding: 10px;
+  background-color: #767e86;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select-wrapper:hover::after {
+  color: #84ceff;
+}
+
+//================== icons =============
+
+.icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 15px;
+}
+
+.trophey-img-wrapper {
+  max-width: 30px;
+  max-height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.trophey-img-wrapper:hover {
+  box-shadow: 0 0 15px var(--switch-shadow-color);
+}
+
+.trophey-img {
+  width: 100%;
+  height: 100%;
+}
+
+//==========theme switcher =========
+
+.theme-switch,
+.sound-switch {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.switch-label,
+.sound-switch-label {
+  cursor: pointer;
+  display: flex;
+}
+
+.switch-label::before {
+  content: var(--switch-icon);
+  font-size: 25px;
+  transition: text-shadow 0.2s;
+}
+
+.switch-label:hover::before {
+  text-shadow: 0 0 15px var(--switch-shadow-color);
+}
+
+.switch-label:hover::after {
+  opacity: 1;
+}
+
+// ========== sound-switcher ==========
+
+.sound-switch-label::before {
+  content: var(--sound-switch-icon);
+  font-size: 25px;
+  transition: text-shadow 0.2s;
+}
+
+.sound-switch-label:hover::before {
+  text-shadow: 0 0 15px var(--switch-shadow-color);
+}
+
+.sound-switch-label:hover::after {
+  opacity: 1;
+}
+
+
+.select-wrapper {
+  display: block;
+
+  @media screen and (min-width: $media-s) {
+    display: none;
+  }
+}

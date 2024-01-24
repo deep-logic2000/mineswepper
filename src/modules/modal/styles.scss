@@ -1,0 +1,80 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.6);
+  z-index: 1;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  width: 40%;
+  height: 60%;
+  min-width: 450px;
+  min-height: 350px;
+  background-color: rgb(231, 231, 231);
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #5a5a5a;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 0px 0px 0px;
+  margin: 0px 0px;
+}
+
+.modal-body {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  font-size: 14px;
+}
+
+.table td {
+  text-align: center;
+}
+
+.button_close {
+  padding: 10px 50px;
+}
+
+.modal_win_info {
+  height: 30%;
+  width: min-content;
+  max-width: 480px;
+  min-height: 150px;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.modal-body_win {
+  color: rgb(226, 15, 216);
+}
+
+.modal-body_lose {
+  color: rgb(226, 22, 15);
+}
+
+.body__overflow {
+  overflow: hidden;
+}
